@@ -64,4 +64,4 @@
 
     define('USER_ALLOWED_TYPES', ['review_feedback', 'staff']);
 
-    define('REVIEW_CHARACTER_PREVIEW_LIMIT', 20);
+    define('REVIEW_CHARACTER_PREVIEW_LIMIT', 50);

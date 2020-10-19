@@ -80,7 +80,7 @@
                             </table>
                         </form>
                     </div>
-                <?php else : ?>
+                <?php elseif (!empty($review_feedback_info) && $review_feedback_info['feedback_date_completed']) : ?>
                     <div class="title_row panel_highlight_normal">Submitted Feedback</div>
                     <div class="main panel_main_normal">
                         <table class="2col">
