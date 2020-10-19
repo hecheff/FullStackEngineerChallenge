@@ -1,0 +1,172 @@
+@import "constants";
+
+body {
+    background-color: $color_background;
+    color: $color_text;
+    
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: $font_size_default;
+    letter-spacing: normal;
+
+    // Resets default margins & padding for HTML body
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+
+    // Responsive layouts not implemented
+    // Assuming desktop-access only with display width >= 1000px
+    min-width: 1000px;
+}
+a {
+    color: $color_text;
+}
+
+div.content_wrapper {
+    @include div_default_spacing();
+
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
+div.main_content {
+    min-height: 100%;
+    position: relative;
+    @include div_default_spacing();
+}
+div.main_content div.notices {
+    width: auto;
+    background-color: $color_bg_highlight;
+    @include defaultDivFrame();
+    @include div_default_spacing();
+}
+
+div.main_content div.title_row {
+    margin-top: $margin_default;
+
+    font-weight: bold;
+    font-size: $font_size_large;
+
+    padding: $margin_small $margin_default;
+    @include defaultDivFrame_title();
+}
+div.main_content div.main {
+    margin-bottom: $margin_default;
+    
+    width: auto;
+    @include defaultDivFrame_content();
+    @include div_default_spacing();
+}
+div.panel_main_normal       { background-color: $color_bg_div_base_normal; }
+div.panel_highlight_normal  { background-color: $color_bg_div_highlight_normal; }
+div.panel_main_admin        { background-color: $color_bg_div_base_admin; }
+div.panel_highlight_admin   { background-color: $color_bg_div_highlight_admin; }
+
+
+div.main_content div.main table {
+    width: 100%;
+    border-collapse: collapse;
+}
+div.main_content div.main table tr th {
+    text-align: left;
+    vertical-align: top;
+    padding: 5px;
+}
+div.main_content div.main table tr td {
+    text-align: left;
+    vertical-align: top;
+    padding: 5px;
+}
+div.main_content div.main table tr td.submit_row { 
+    padding-top: $margin_small;
+    text-align: center;
+}
+div.main_content textarea.review_contents {
+    width: 100%;
+    height: 300px;
+}
+
+
+table.staff_entry input.input_username  { width: 200px; }
+table.staff_entry input.input_name      { width: 300px; }
+table.staff_entry input.input_email     { width: 350px; }
+
+div.main_content div.main table.staff_list tr td.id {
+    width: 5%;
+}
+div.main_content div.main table.staff_list tr td.username {
+    width: 15%;
+}
+div.main_content div.main table.staff_list tr td.first_name {
+    width: 15%;
+}
+div.main_content div.main table.staff_list tr td.last_name {
+    width: 15%;
+}
+div.main_content div.main table.staff_list tr td.email {
+    width: 15%;
+}
+div.main_content div.main table.staff_list tr td.access_level {
+    width: 5%;
+}
+div.main_content div.main table.staff_list tr td.timestamp {
+    width: 5%;
+}
+
+div.header {
+    width: 100%;
+    background-color: $color_bg_highlight;
+
+    padding: $margin_default 0 0 0;
+}
+div.header div.menu {
+    width: auto;
+    height: 50px;
+
+    margin-top: 20px;
+}
+div.header div.menu div.sub_title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+div.header div.menu a {
+    text-decoration: none;
+    font-weight: bold;
+} 
+div.header div.menu a div.menu_item {
+    background-color: $color_bg_button_default;
+    height: 20px;
+    padding: 15px 30px;
+    vertical-align: center;
+}
+
+div.header div.menu div.menu_item:hover {
+    background-color: $color_bg_button_hover;
+}
+div.header div.menu div.menu_left {
+    float: left;
+}
+div.header div.menu div.menu_right {
+    float: right;
+}
+
+
+div.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: $font_size_header_title;
+}
+div.footer {
+    width: 100%;
+    min-height: 50px;
+    background-color: $color_bg_highlight;
+
+    clear: both;
+    float: none;
+    position: relative;
+    bottom: 0;
+}
+div.footer div.footer_copyright {
+    font-size: $font_size_small;
+    text-align: center;
+}

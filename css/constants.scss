@@ -1,0 +1,41 @@
+// Colors
+$color_background: #222233;
+$color_bg_highlight: #444455;
+
+$color_bg_button_default: #666688;
+$color_bg_button_hover: #9999AA;
+
+$color_bg_div_base_normal:      #444455;
+$color_bg_div_highlight_normal: #666688;
+$color_bg_div_base_admin:       #314d4c;
+$color_bg_div_highlight_admin:  #377976;
+
+
+$color_text:#FFFFFF;
+
+
+
+// Margins & Borders
+$margin_default:    20px;
+$margin_small:      $margin_default/2;
+$border_radius_default: 5px;
+
+// Fonts
+$font_size_default:         12pt;
+$font_size_large:           14pt;
+$font_size_small:           10pt;
+$font_size_header_title:    16pt;
+
+
+@mixin div_default_spacing() {
+	padding: $margin_default;
+}
+@mixin defaultDivFrame() {
+	border-radius: $border_radius_default;
+}
+@mixin defaultDivFrame_title() {
+	border-radius: $border_radius_default $border_radius_default 0 0;
+}
+@mixin defaultDivFrame_content() {
+	border-radius: 0 0 $border_radius_default $border_radius_default;
+}
