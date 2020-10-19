@@ -66,7 +66,7 @@
                                 AddSessionMessage("A feedback request for this review has already been assigned to this staff member.");
                             }
                         } elseif ($action == "edit") {
-                            UpdateReviewFeedback($id, $feedback_content);
+                            AddSessionMessage("Performance review feedback submissions not supported via this method. Please notify an administrator.");
                         } elseif ($action == "delete") {
                             AddSessionMessage("Performance review feedback cannot be deleted. If an entry needs to be deleted, please notify an administrator.");
                         } else {

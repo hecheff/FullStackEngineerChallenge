@@ -64,7 +64,7 @@
                 <?php if (!empty($review_feedback_info) && !$review_feedback_info['feedback_date_completed']) : ?>
                     <div class="title_row panel_highlight_normal">Create Feedback</div>
                     <div class="main panel_main_normal">
-                        <form action="/php/admin_exec.php?type=review_feedback&action=edit" method="post" onsubmit='return confirm("Are you sure you want to submit this feedback?");'>
+                        <form action="/php/submit_feedback.php" method="post" onsubmit='return confirm("Are you sure you want to submit this feedback?");'>
                             <input type="hidden" id="id" name="id" value="<?php echo $review_feedback_info['id']; ?>">
                             <table class="2col">
                                 <tr>
